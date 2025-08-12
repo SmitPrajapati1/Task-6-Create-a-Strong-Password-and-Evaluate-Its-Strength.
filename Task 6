@@ -1,0 +1,29 @@
+
+┌─[✗]─[user@parrot]─[~]
+└──╼ $sudo su
+┌─[root@parrot]─[/home/user]
+└──╼ #pwgen 8 1
+bash: pwgen: command not found
+┌─[✗]─[root@parrot]─[/home/user]
+└──╼ #pwgen -c -n 12 1
+bash: pwgen: command not found
+┌─[✗]─[root@parrot]─[/home/user]
+└──╼ #openssl rand -base64 16
+BqXgPVQYaGZRhPWY8fJZ/A==
+┌─[root@parrot]─[/home/user]
+└──╼ #tr -dc 'A-Za-z0-9!@#$%^&*()_+='
+^C
+┌─[✗]─[root@parrot]─[/home/user]
+└──╼ #tr -dc 'A-Za-z0-9!@#$%^&*()_+=' </dev/urandom | head -c 16 ; echo
+y&J#m6j*x+=zF328
+┌─[root@parrot]─[/home/user]
+└──╼ #
+─[root@parrot]─[/home/user]
+└──╼ #echo "YourPasswordHere" | cracklib-check
+YourPasswordHere: OK
+┌─[root@parrot]─[/home/user]
+└──╼ #nano password_tips.txt
+┌─[root@parrot]─[/home/user]
+└──╼ #curl -s http://en.wikipedia.org/wiki/Password_cracking | grep -i "brute force"
+
+
